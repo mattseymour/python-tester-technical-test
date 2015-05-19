@@ -4,9 +4,9 @@ The aim of this repo is to be a simple technical test which will test some
 basic skills of a python application tester. Take as long as you need to complete this test (but, try to take less than 90 minutes).
 
 ## Application Overview:
-The program simply takes a URL and an html dom tag (a, div, form) as arguments. The application performs a GET request on the url and counts the number of occurances of a particular tag using the `BeautifulSoup.find_all` function. The number of occurances of a html dom element is then passed into a fizz buzz function. Example output of a successful run is:
+The program simply takes a URL and an html dom tag (a, div, form) as arguments. The application performs a GET request on the url and counts the number of occurances of a particular tag using the `BeautifulSoup.find_all` function. The number of occurances of a html dom element is then passed into a fizz buzz function. Example output of a successful run is, is a print line and files called output.txt in the format:
 
-    > div = 12 = fizz
+    > http://someurl = div = 12 = fizz
 
 ## Skills tests:
 
@@ -64,7 +64,11 @@ Note: If the number is divisible by 3 and not by 5 return fizz; if the number is
 6: The developer who wrote this code forgot unit tests, write some unit tests to backwards test the current application functionality. Commit your changes.
 
 
-7: Write a unit test to test the `element_count()` function. Write this test using the mock framework so a network connection is not required on the tester machine in order to run the tests. Commit your changes.
+7: Write a unit test to test the `element_count()` and `app_ouput()` functions. Write this test using the mock framework so:
+ * A network connection is not is not required on the tester machine in order to run the tests.
+ * The output file is not generated on the testers machine.
+
+Commit your changes.
 
 Note: The mock framework is part of core Python3 (https://docs.python.org/3/library/unittest.mock.html); If you are using Python2 you will need to install the mock package : http://www.voidspace.org.uk/python/mock/
 

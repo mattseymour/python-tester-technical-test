@@ -39,6 +39,16 @@ def fizz_or_buzz(number):
     else:
         return ''
 
+def app_output(*args):
+    with open('output.txt', 'a') as fd:
+        fd.write('{} = {} = {} = {}\n'.format(*args))
+    print('{} = {} = {} = {}\n'.format(*args))
+
+def app(a,b):
+    count = element_count(a,b)
+    FizzBuzz = fizz_or_buzz(count)
+    app_output(a,b,count,FizzBuzz)
+
 import sys
 if __name__ == '__main__':
         # application will take two args url, html tag type (a, ul, div, ...etc)
@@ -49,7 +59,4 @@ if __name__ == '__main__':
             url = sys.argv[1]
             tag = sys.argv[2]
 
-        count = element_count(url, tag)
-        fizzBuzz = fizz_or_buzz(count)
-        print('{} = {} = {}'.format(tag, count, fizzBuzz))
-
+        app(url, tag)
